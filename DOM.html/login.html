@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="email">Enter Email</label>
+        <input type="text" id="email" placeholder="Enter Email">
+        <span id="e_error" style="color: red;"></span><br><br>
+        <label for="Password">Enter Password</label>
+        <input type="password" id="pass" placeholder="Enter Password">
+        <span id="p_error" style="color: red;"></span><br><br>
+        <input type="checkbox" id="check" onclick="return pass_valid()">
+        <label for="check">Show password</label>
+        <button onclick="return valid()">Login</button>
+
+    </form>
+    <script>
+        function valid(){
+            let email=document.getElementById('email').value;
+            let pass=document.getElementById('email').value;
+
+            if(email==""){
+                document.getElementById("e_error").innerText="please enter an email";
+                return false;
+            }
+            if(!(email.includes('@')) || !(email.includes('gmail.com'))){
+                document.getElementById('e_error').innerText="please enter valid email";
+
+            }
+
+            if(pass==""){
+                document.getElementById("p_error").innerText="please enter a password";
+                return false;
+            }
+
+            if(pass.length()!=6){
+                document.getElementById("p_error").innerText="please enter 6 character password";
+                return false;
+            }else{
+                document.getElementById("p_error").innerText="";
+            }
+            return true;
+        } 
+        
+        function pass_valid(){
+            let pass=document.getElementById("pass");
+            if(pass.type == 'password'){
+                pass.type='text';
+            }else{
+                pass.type='password';
+            }
+            return true;
+        }
+        
+    </script>
+</body>
+</html>

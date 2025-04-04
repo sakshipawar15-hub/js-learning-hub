@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let s="hello";
+        document.write(s+"<br>");
+        document.write(typeof s);
+
+        let st=new String("welcome");
+        document.write(st+"<br>");
+        document.write(typeof st+"<br>");
+
+
+        let str=st.concat("karan");
+        document.write(str+"<br>");
+
+        document.write(st.charAt(2)+"<br>");
+        document.write(st.charCodeAt(2)+"<br>");
+        document.write(st.codePointAt(2)+"<br>");
+
+        document.write(st.toUpperCase()+"<br>");
+
+        document.write(st.toLowerCase()+"<br>");
+
+        document.write(st.length+"<br>");
+        document.write(st.startsWith('W')+"<br>");
+        document.write(st.endsWith('e')+"<br>");
+        document.write(st.includes('w')+"<br>");
+        document.write(st.replace('m','d')+"<br>");
+
+        document.write(st.search('c')+"<br>");
+        document.write(st.substring(1,7)+"<br>");
+        document.write(st.valueOf()+"<br>");
+        document.write(st.italics()+"<br>");
+        
+
+        let s1="welcom to mumbai";
+        let x=s1.slit('',1);
+        for(let d of x){
+            document.write(d+"<br>");
+        }
+
+        let s2="welcome  ";
+        document.write(s2.length+"<br>")
+        let z=s2.trimEnd();
+        document.write(z.length+"<br>")
+        
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

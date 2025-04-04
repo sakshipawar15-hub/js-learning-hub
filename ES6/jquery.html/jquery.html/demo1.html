@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 id="h">welcome</h1>
+    <button id="btn">css</button>
+    <div></div>
+    <script>
+
+        $(function(){
+
+            $("#btn").click(function(){
+                $("#h").hide(2000,function(){
+                    alert("please login frist");
+                });
+            });
+            $("#btn").click(function(){
+                $("div").css({"background-color":"red","height":"90px","width":"90px",
+                "margin-top":"10%","margin-left":"30",}).hide(5000,function(){
+                    alert("you need to create account to visit this web-site");
+
+                });
+            })
+        })
+    </script>
+</body>
+</html>

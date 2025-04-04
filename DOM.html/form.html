@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="main">
+        <label for="email">Enter EmailId</label>
+        <input type="text" placeholder="Enter Email" class="valid">
+        <span class="error" style="color: red;"></span><br><br>
+        <label for="pass">Enter Password</label>
+        <input type="password" placeholder="Enter Password" class="valid">
+        <span class="error" style="color: red;"></span><br><br>
+        <button onclick="return valid()">login</button>
+    </form>
+    <script>
+        function valid(){
+            let s=document.getElementsByClassName("valid");
+            let e=document.getElementsByClassName("valid");
+
+            if(s[0].value==""){
+                e[0].innerText="please enter an email";
+                return false;
+            }else if(!s[0].value.includes('@')|| !s[0].value.includes('gmail.com')){
+                e[0].ineerText="please enter valid email";
+                return false;
+            }else{
+                e[0].innerText="";
+            }
+                
+            if(s[1].value==""){
+                e[1].innerText="please enter an password";
+                return false;
+            }else if(s[1].value.length!=6){
+                e[1].ineerText="please enter 6 character password";
+                return false;
+            }else{
+                e[1].innerText="";
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

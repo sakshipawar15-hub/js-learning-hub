@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="greet()">ok</button>
+    <button onclick="user()">user</button>
+    <button onclick="del">del</button>
+    <button onclick="openwin()">open</button>
+    <button onclick="closewin()">del</button>
+    <script>
+        function greet()
+        {
+        alert("sumbit successfully");
+        }
+
+        function user(){
+         let email=prompt("enter email","V@gmail.com");
+            if(email){
+                document.write("login successfully");
+            }else{
+                document.write(ok)
+            }
+        }
+
+        function del(){
+            let del=confirm("are you sure you want to delete file");
+            if(del){
+                document.write("delete successfully");
+            }else{
+                document.write("ok")
+            }
+        }
+
+        let url;
+        function openwin(){
+            url=open("http://www.facebook.com","_blank","height=400","width=400")
+        }
+        
+    </script>
+</body>
+</html>

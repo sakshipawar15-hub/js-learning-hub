@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function display(){
+            document.write("hello");
+        }
+        display();
+
+        function withdraw(amount){
+            let balance=10000;
+            if(amount<balance){
+                balance-=amount;
+                document.write("withdraw successfully&nbsp"+amount);
+
+            }else{
+                document.write("insufficient amount");
+            }
+        }
+        withdraw(2000);
+
+
+        function getName(){
+            return "darshan"
+        }
+
+        let name=getName();
+        document.write(name+"<br>");
+        document.write(getName+"<br>");
+//return type with parameteri
+        function getContact(contact){
+            return contact;
+        }
+        document.write(getContact(9702660855));
+    </script>
+</body>
+</html>
